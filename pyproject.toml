@@ -19,7 +19,7 @@ classifiers = [
 ]
 dependencies = [
     "click >= 8.1",
-    "ifccityjson @ git+https://github.com/amiroo4/IfcOpenShell/tree/v0.8.0/src/ifccityjson/ifccityjson"
+    "ifccityjson @ git+https://github.com/amiroo4/IfcOpenShell.git@23951c1d94d48e0ee367eab394ccc07c8b234935#subdirectory=src/ifccityjson"
 ]
 optional-dependencies = { develop = ["pytest", "tox"] }
 scripts = { cityjson2ifc = "cityjson2ifc_cli.cli:cli" }
