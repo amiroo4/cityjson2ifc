@@ -43,11 +43,11 @@ def load_cityjson(infile, ignore_duplicate_keys):
             click.echo(w)
     except errors.CJInvalidVersion as e:
         raise click.ClickException(e.msg)
-    if cm.get_version() != "1.1":
-        click.echo("Upgrading CityJSON to v1.1")
-        re, reasons = cm.upgrade_version("1.1", digit=4)
-        if (re == False):
-            click.echo("WARNING: %s" % (reasons))
+    # if cm.get_version() != "1.1":
+    #     click.echo("Upgrading CityJSON to v1.1")
+    #     re, reasons = cm.upgrade_version("1.1", digit=4)
+    #     if (re == False):
+    #         click.echo("WARNING: %s" % (reasons))
     # Dereference the CityJSON geometry boundaries so that they store the
     # coordinates instead of vertex indices
     cm.cityobjects = dict()
